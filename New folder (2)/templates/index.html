@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Story Downloader</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+
+      /* Body styling: Gradient background for a modern look */
+      
+      body {
+        font-family: "Roboto", sans-serif; /* Modern font */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(
+          135deg,
+          #6d83f2,
+          #e1e4e8
+        ); /* Gradient background */
+        color: #333;
+      }
+
+      /* Container styling: Centered with padding, shadow, and rounded corners */
+      
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);                          /* Shadow for depth */
+        border-radius: 15px;                                                /* Rounded corners */
+        width: 100%;
+        max-width: 400px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;              /* Smooth transitions */
+      }
+
+      /* Container hover effect: Slight lift and increased shadow */
+      
+      .container:hover {
+        transform: translateY(-10px);                                        /* Lift effect */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);                          /* Enhanced shadow */
+      }
+
+      /* Heading styling: Color and size adjustments */
+     
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      /* Input field styling: Modern border, focus effect */
+      
+      input {
+        width: calc(100% - 22px);                                             /* Full-width minus padding */
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;                                               /* Light border */
+        border-radius: 8px;                                                   /* Rounded corners */
+        font-size: 16px;
+        outline: none;                                                        /* Remove default outline */
+        transition: border-color 0.3s ease;                                   /* Smooth border-color transition */
+      }
+
+      /* Input focus effect: Border color change */
+      
+      input:focus {
+        border-color: #6d83f2;                                                /* Focus border color */
+      }
+
+      /* Button styling: Padding, color, rounded corners */
+      
+      button {
+        padding: 15px 25px;
+        background-color: #28a745; /* Green background */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Rounded corners */
+        font-size: 16px;
+        cursor: pointer; /* Pointer cursor */
+        transition: background-color 0.3s ease, transform 0.3s ease;            /* Smooth transitions */
+      }
+
+      /* Button hover effect: Darker green and scale up */
+      
+      button:hover {
+        background-color: #218838; /* Darker green on hover */
+        transform: scale(1.05); /* Slight scale up */
+      }
+
+      /* Button active effect: Even darker green */
+      
+      button:active {
+        background-color: #1e7e34; /* Even darker green when pressed */
+      }
+
+      /* Font Awesome icon styling: Space between icon and text */
+      
+      .fa-download {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Instagram Story Downloader</h1>
+      <form action="/download" method="post">
+        <input
+          type="text"
+          name="instagram_username"
+          placeholder="Enter Instagram username"
+          required
+        /><br />
+        <button type="submit">
+          <i class="fa fa-download"></i> Download Stories
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
